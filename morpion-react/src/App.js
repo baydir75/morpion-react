@@ -1,17 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
 class App extends React.Component {
+  constructor() {
+    super()
+  
+    this.state = {
+       
+    }
+  }
+
   render() {
     return (
-      <div className="container">
-        <div>
-          <h1>Morpion - React</h1>
-        </div>
-
+      <div>
+        
       </div>
     )
   }
+  
 }
 
-export default App;
+export default App
