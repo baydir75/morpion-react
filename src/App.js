@@ -1,34 +1,22 @@
 import React from 'react'
-import Grid from './Components/Grid'
+import Game from './components/Game'
 
 class App extends React.Component {
   constructor() {
     super()
   
     this.state = {
-       player: "player 1"
+       
     }
-
-    this.turn = this.turn.bind(this)
-  }
-
-  turn() {
-    this.setState(prevState => {
-      return {
-        ...prevState,
-        player: "player 2"
-      }
-    })
   }
 
   render() {
     return (
       <div>
-        <Grid/>
+        <Game/>
       </div>
     )
   }
-  
 }
 
 export default App
