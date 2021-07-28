@@ -1,50 +1,39 @@
 import React from 'react'
 import Game from './Game'
+import Square from './Square'
 
 class Grid extends React.Component {
+  renderSquare(i) {
+    return <Square 
+        value={this.props.Squares[i]} 
+        onClick={() => this.props.onClick(i)}
+        />
+  }
+
   render() {
-    const gridStyle = {
-        width: '100px',
-        height: '100px'
-    }
-
-    const squares = [9].fill(null);
-    const currentPlayer = 'X';
-
-    const renderSquare = (index) => (
-      <div
-          role="button"
-          tabIndex={0}
-          style={gridStyle}
-      >
-          {squares[index]}
-      </div>
-  );
-
     return (
       <>
-        <div className="container">
-          <div className="row">
-            {renderSquare(0)}
-            {renderSquare(1)}
-            {renderSquare(2)}
+        <div>
+          <div className="border-row">
+            {this.renderSquare(0)}
+            {this.renderSquare(1)}
+            {this.renderSquare(2)}
           </div>
-
-          <div className="row">
-            {renderSquare(3)}
-            {renderSquare(4)}
-            {renderSquare(5)}
+          <div className="border-row">
+            {this.renderSquare(3)}
+            {this.renderSquare(4)}
+            {this.renderSquare(5)}
           </div>
-
-          <div className="row">
-            {renderSquare(6)}
-            {renderSquare(7)}
-            {renderSquare(8)}
+          <div className="border-row">
+            {this.renderSquare(6)}
+            {this.renderSquare(7)}
+            {this.renderSquare(8)}
           </div>
         </div>
       </>
     )
   }
+  
 }
 
 export default Grid;
