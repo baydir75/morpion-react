@@ -1,5 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react'
+import Grid from './Components/Grid';
 
 class App extends React.Component {
   render() {
@@ -9,6 +10,7 @@ class App extends React.Component {
           <h1>Morpion - React</h1>
         </div>
 
+        <Grid />
       </div>
     )
   }
