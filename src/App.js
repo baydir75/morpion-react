@@ -6,8 +6,19 @@ class App extends React.Component {
     super()
   
     this.state = {
-       
+       player: "player 1"
     }
+
+    this.turn = this.turn.bind(this)
+  }
+
+  turn() {
+    this.setState(prevState => {
+      return {
+        ...prevState,
+        player: "player 2"
+      }
+    })
   }
 
   render() {
