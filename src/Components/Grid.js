@@ -28,6 +28,7 @@ export default class Grid extends React.Component {
                     player: "bluePlayer"
                 }
             })
+            this.VictoryCondition()
         } else {
             tempArray.splice(id, 1, "bluePlayer")
             this.setState(prevState => {
@@ -37,9 +38,10 @@ export default class Grid extends React.Component {
                     player: "redPlayer"
                 }
             })
+            this.VictoryCondition()
         }
     }
-    renderVictoryCondition(){
+    VictoryCondition(){
         if (
             this.state.array[0] === this.state.array[1] === this.state.array[2] === "bluePlayer" ||
             this.state.array[3] === this.state.array[4] === this.state.array[5] === "bluePlayer" ||
@@ -55,7 +57,8 @@ export default class Grid extends React.Component {
                 <p>Blue player wins</p>
                 </div>
             )
-        } else if (
+        }
+        if (
             this.state.array[0] === this.state.array[1] === this.state.array[2] === "redPlayer" ||
             this.state.array[3] === this.state.array[4] === this.state.array[5] === "redPlayer" ||
             this.state.array[6] === this.state.array[7] === this.state.array[8] === "redPlayer" ||
@@ -92,7 +95,6 @@ export default class Grid extends React.Component {
                         <td><Square id={8} value={this.state.array[8]}  onClick={this.changeBackgroundColor} >C3</Square></td>
                     </tr>
                 </table>
-                {this.renderVictoryCondition()}
             </div>
         )
     }
