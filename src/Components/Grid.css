@@ -1,6 +1,11 @@
-.square {
-    width: 100px;
-    height: 100px;
-    border: 2px solid black;
-    margin-right: 2px;
+.bluePlayer {
+    background-color: blue;
+}
+
+.redPlayer {
+    background-color: red;
+}
+
+.white {
+    background-color: white;
 }

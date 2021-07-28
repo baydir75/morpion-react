@@ -1,0 +1,15 @@
+button {
+    color: white;
+    background-color:white;
+    border: solid 1px black;
+}
+
+.bluePlayer {
+    color: blue;
+    background-color: blue;
+}
+
+.redPlayer {
+    background-color: red;
+    color: red;
+}
