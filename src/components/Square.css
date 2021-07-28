@@ -4,12 +4,12 @@ button {
     border: solid 1px black;
 }
 
-.player1 {
+.bluePlayer {
     color: blue;
     background-color: blue;
 }
 
-.player2 {
+.redPlayer {
     background-color: red;
     color: red;
 }

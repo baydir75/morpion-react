@@ -1,7 +1,11 @@
-.player1 {
+.bluePlayer {
     background-color: blue;
 }
 
-.player2 {
+.redPlayer {
     background-color: red;
+}
+
+.white {
+    background-color: white;
 }
