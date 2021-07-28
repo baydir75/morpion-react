@@ -6,7 +6,6 @@ class Square extends React.Component {
         super()
     
         this.state = {
-            style: "",
         }
     }
 
