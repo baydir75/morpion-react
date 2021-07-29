@@ -1,5 +1,5 @@
 import React from 'react'
-import Grid from './Components/Grid';
+import Game from './Components/Game';
 import './App.css';
 
 
@@ -9,7 +9,7 @@ export default class App extends React.Component {
   render(){
     return (
       <div>
-        <Grid />
+        <Game />
       </div>
     )
   }
