@@ -86,26 +86,36 @@ export default class Grid extends React.Component {
             console.log ("Red player wins")
         }
     }
+    reset =(id)=> {
+        this.setState(prevState => {
+            return {
+                ...prevState,
+                player: "red",
+                squares: ["white", "white", "white", "white", "white", "white", "white", "white", "white"],
+            }
+        })
+    }
     render() {
         return (
             <div>
                 <div>
                     <div className="row">
-                    <button disabled={this.state.squares[0] === "white" ? false : true} id={0} className={this.state.squares[0]} onClick={() => this.changeSquareColor(0)}></button>
-                    <button disabled={this.state.squares[1] === "white" ? false : true} id={1} className={this.state.squares[1]} onClick={() => this.changeSquareColor(1)}></button>
-                    <button disabled={this.state.squares[2] === "white" ? false : true} id={2} className={this.state.squares[2]} onClick={() => this.changeSquareColor(2)}></button>
+                        <button disabled={this.state.squares[0] === "white" ? false : true} className={this.state.squares[0]} onClick={() => this.changeSquareColor(0)}></button>
+                        <button disabled={this.state.squares[1] === "white" ? false : true} className={this.state.squares[1]} onClick={() => this.changeSquareColor(1)}></button>
+                        <button disabled={this.state.squares[2] === "white" ? false : true} className={this.state.squares[2]} onClick={() => this.changeSquareColor(2)}></button>
                     </div>
                     <div className="row">
-                    <button disabled={this.state.squares[3] === "white" ? false : true} id={3} className={this.state.squares[3]} onClick={() => this.changeSquareColor(3)}></button>
-                    <button disabled={this.state.squares[4] === "white" ? false : true} id={4} className={this.state.squares[4]} onClick={() => this.changeSquareColor(4)}></button>
-                    <button disabled={this.state.squares[5] === "white" ? false : true} id={5} className={this.state.squares[5]} onClick={() => this.changeSquareColor(5)}></button>
+                        <button disabled={this.state.squares[3] === "white" ? false : true} className={this.state.squares[3]} onClick={() => this.changeSquareColor(3)}></button>
+                        <button disabled={this.state.squares[4] === "white" ? false : true} className={this.state.squares[4]} onClick={() => this.changeSquareColor(4)}></button>
+                        <button disabled={this.state.squares[5] === "white" ? false : true} className={this.state.squares[5]} onClick={() => this.changeSquareColor(5)}></button>
                     </div>
                     <div className="row">
-                    <button disabled={this.state.squares[6] === "white" ? false : true} id={6} className={this.state.squares[6]} onClick={() => this.changeSquareColor(6)}></button>
-                    <button disabled={this.state.squares[7] === "white" ? false : true} id={7} className={this.state.squares[7]} onClick={() => this.changeSquareColor(7)}></button>
-                    <button disabled={this.state.squares[8] === "white" ? false : true} id={8} className={this.state.squares[8]} onClick={() => this.changeSquareColor(8)}></button>
+                        <button disabled={this.state.squares[6] === "white" ? false : true} className={this.state.squares[6]} onClick={() => this.changeSquareColor(6)}></button>
+                        <button disabled={this.state.squares[7] === "white" ? false : true} className={this.state.squares[7]} onClick={() => this.changeSquareColor(7)}></button>
+                        <button disabled={this.state.squares[8] === "white" ? false : true} className={this.state.squares[8]} onClick={() => this.changeSquareColor(8)}></button>
                     </div>
                 </div>
+                <button onClick={this.reset}>Reset</button>
             </div>
         )
     }
