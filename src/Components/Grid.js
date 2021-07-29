@@ -22,7 +22,7 @@ export default class Grid extends React.Component {
                 }
             })
             this.victoryCondition()
-        } 
+        }
         if (this.state.player === "blue") {
             tempSquare.splice(id, 1, "blue")
             this.setState(prevState => {
@@ -38,53 +38,85 @@ export default class Grid extends React.Component {
     
     victoryCondition(){
         if (this.state.squares[0] === "blue" && this.state.squares[1] === "blue" && this.state.squares[2] === "blue") {
-                console.log ("Blue player wins")
-        }
+            console.log ("Blue player wins")
+            alert("Blue player wins")
+            this.reset()
+        } else
         if (this.state.squares[3] === "blue" && this.state.squares[4] === "blue" && this.state.squares[5] === "blue") {
-                console.log ("Blue player wins")
-        }
+            console.log ("Blue player wins")
+            alert("Blue player wins")
+            this.reset()
+        } else
         if (this.state.squares[6] === "blue" && this.state.squares[7] === "blue" && this.state.squares[8] === "blue") {
             console.log ("Blue player wins")
-        }
+            alert("Blue player wins")
+            this.reset()
+        } else
         if (this.state.squares[0] === "blue" && this.state.squares[3] === "blue" && this.state.squares[6] === "blue") {
             console.log ("Blue player wins")
-        }
-        if(this.state.squares[1] === "blue" && this.state.squares[4] === "blue" && this.state.squares[7] === "blue") {
+            alert("Blue player wins")
+            this.reset()
+        } else
+        if (this.state.squares[1] === "blue" && this.state.squares[4] === "blue" && this.state.squares[7] === "blue") {
             console.log ("Blue player wins")
-        }
+            alert("Blue player wins")
+            this.reset()
+        } else
         if (this.state.squares[2] === "blue" && this.state.squares[5] === "blue" && this.state.squares[8] === "blue") {
             console.log ("Blue player wins")
-        }
+            alert("Blue player wins")
+            this.reset()
+        } else
         if (this.state.squares[0] === "blue" && this.state.squares[4] === "blue" && this.state.squares[8] === "blue") {
             console.log ("Blue player wins")
-        }
+            alert("Blue player wins")
+            this.reset()
+        } else
         if (this.state.squares[2] === "blue" && this.state.squares[4] === "blue" && this.state.squares[6] === "blue")  {
             console.log ("Blue player wins")
-        }
-        if (this.state.squares[0] === this.state.squares[1] === this.state.squares[2] === "red") {
-                console.log ("Red player wins")
-        }
-        if (this.state.squares[3] === this.state.squares[4] === this.state.squares[5] === "red") {
+            alert("Blue player wins")
+            this.reset()
+        } else
+        if (this.state.squares[0] === "red" && this.state.squares[1] === "red" && this.state.squares[2] === "red") {
             console.log ("Red player wins")
-        }
-        if (this.state.squares[6] === this.state.squares[7] === this.state.squares[8] === "red") {
+            alert("Red player wins")
+            this.reset()
+        } else
+        if (this.state.squares[3] === "red" && this.state.squares[4] === "red" && this.state.squares[5] === "red") {
             console.log ("Red player wins")
-        }
-        if (this.state.squares[0] === this.state.squares[3] === this.state.squares[6] === "red") {
+            alert("Red player wins")
+            this.reset()
+        } else
+        if (this.state.squares[6] === "red" && this.state.squares[7] === "red" && this.state.squares[8] === "red") {
             console.log ("Red player wins")
-        }
-        if (this.state.squares[1] === this.state.squares[4] === this.state.squares[7] === "red") {
+            alert("Red player wins")
+            this.reset()
+        } else
+        if (this.state.squares[0] === "red" && this.state.squares[3] === "red" && this.state.squares[6] === "red") {
             console.log ("Red player wins")
-        }
-        if (this.state.squares[2] === this.state.squares[5] === this.state.squares[8] === "red") {
+            alert("Red player wins")
+            this.reset()
+        } else
+        if(this.state.squares[1] === "red" && this.state.squares[4] === "red" && this.state.squares[7] === "red") {
             console.log ("Red player wins")
-        }
-        if (this.state.squares[0] === this.state.squares[4] === this.state.squares[8] === "red") {
+            alert("Red player wins")
+            this.reset()
+        } else
+        if (this.state.squares[2] === "red" && this.state.squares[5] === "red" && this.state.squares[8] === "red") {
             console.log ("Red player wins")
-        }
-        if (this.state.squares[2] === this.state.squares[4] === this.state.squares[6] === "red") {
+            alert("Red player wins")
+            this.reset()
+        } else
+        if (this.state.squares[0] === "red" && this.state.squares[4] === "red" && this.state.squares[8] === "red") {
             console.log ("Red player wins")
-        }
+            alert("Red player wins")
+            this.reset()
+        } else
+        if (this.state.squares[2] === "red" && this.state.squares[4] === "red" && this.state.squares[6] === "red")  {
+            console.log ("Red player wins")
+            alert("Red player wins")
+            this.reset()
+        } 
     }
     reset =(id)=> {
         this.setState(prevState => {
