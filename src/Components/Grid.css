@@ -1,8 +1,18 @@
-.bluePlayer {
+button {
+    width: 100px;
+    height: 100px;
+    border: solid 1px black;
+}
+
+.row {
+    display: flex;
+}
+
+.blue {
     background-color: blue;
 }
 
-.redPlayer {
+.red {
     background-color: red;
 }
 

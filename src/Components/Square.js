@@ -14,10 +14,6 @@ export default class Square extends React.Component {
         this.setState({style: this.props.value})
     }
 
-    componentDidUpdate() {
-        console.log(this.props)
-    }
-
     render() {
         return (
             <div>
