@@ -319,7 +319,7 @@ export default class Game extends React.Component {
                         <button disabled={this.state.squares[7] === "white" ? false : true} className={this.state.squares[7]} onClick={() => this.changeSquareColor(7)}></button>
                         <button disabled={this.state.squares[8] === "white" ? false : true} className={this.state.squares[8]} onClick={() => this.changeSquareColor(8)}></button>
                     </div>
-                    <button className="btn"  onClick={this.reset}>New Game</button>
+                    <button className="btn" onClick={this.reset}>New Game</button>
                     {this.renderShowPlayerTurn()}
                     {this.renderVictoryText()}
                     <p>Le score est de : Blue {this.state.blueScore} - Red {this.state.redScore}</p>
